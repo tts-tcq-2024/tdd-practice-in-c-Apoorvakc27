@@ -104,11 +104,25 @@ int  check_empty_str(const char *str)
     return 0;
 }    
 
+int check_neg_empty(const char *str)
+{
+   if(check_negative_char(str))
+   {
+     return 1;
+   }
+   else if(check_empty_str(str))
+   {
+     return 1;
+   }
+return 0;
+}
+
+
 int validate_string(const char *str)
 {
     if(str != NULL)
     {
-        return check_negative_char(str) || check_empty_str(str);
+        return check_neg_empty(str);
     }
     return 0;
 }
