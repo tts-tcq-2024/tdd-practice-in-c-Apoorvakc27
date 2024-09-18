@@ -8,3 +8,9 @@ TEST(StringCalculatorAddTests, ExpectZeroForEmptyInput) {
     ASSERT_EQ(result, expectedresult);
 }
 
+TEST(StringCalculatorAddTests, NULL_Input) {
+    int expectedresult = -1;
+    const char*  input = NULL;
+    int result = Addition_NumUsingString(input);
+    ASSERT_EQ(result, expectedresult);
+}
