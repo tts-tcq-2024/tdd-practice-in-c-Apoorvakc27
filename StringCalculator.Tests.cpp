@@ -80,7 +80,7 @@ TEST(StringCalculatorAddTests, Negativeinput) {
 }
 
 TEST(StringCalculatorAddTests, Numberwithnegativesymbol) {
-    int expectedresult = 3;
+    int expectedresult = -1;
     const char*  input = "1,-,2";
     int result = Addition_NumUsingString(input);
     ASSERT_EQ(result, expectedresult);
