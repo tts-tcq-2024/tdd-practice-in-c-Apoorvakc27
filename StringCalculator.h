@@ -13,7 +13,7 @@ int neg_loop(const char *str,int i)
 int  check_negative_char(const char *str)
 {
      int result = 0,i=0;
-    while(ch[i] != '\0')
+    while(str[i] != '\0')
     {
       result = neg_loop(str,i);
       if(result == 0)
