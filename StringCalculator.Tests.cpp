@@ -50,3 +50,40 @@ TEST(StringCalculatorAddTests, ExpectSumWithCustomDelimiter) {
     int result = Addition_NumUsingString(input);
     ASSERT_EQ(result, expectedresult);
 }
+
+TEST(StringCalculatorAddTests, Sumofnumberwithcommadelimiter) {
+   int expectedresult = 113;
+    const char*  input = "1,112";
+    int result = Addition_NumUsingString(input);
+    ASSERT_EQ(result, expectedresult);
+}
+
+TEST(StringCalculatorAddTests, numberwithcharacter) {
+       int expectedresult = 1000;
+    const char*  input = "1,abchd,999";
+    int result = Addition_NumUsingString(input);
+    ASSERT_EQ(result, expectedresult);
+}
+
+TEST(StringCalculatorAddTests, Emptystring) {
+        int expectedresult = 0;
+    const char*  input = "";
+    int result = Addition_NumUsingString(input);
+    ASSERT_EQ(result, expectedresult);
+}
+
+TEST(StringCalculatorAddTests, Negativeinput) {
+       int expectedresult = -1;
+    const char*  input = "-8,-2";
+    int result = Addition_NumUsingString(input);
+    ASSERT_EQ(result, expectedresult);
+}
+
+TEST(StringCalculatorAddTests, Numberwithnegativesymbol) {
+    int expectedresult = 3;
+    const char*  input = "1,-,2";
+    int result = Addition_NumUsingString(input);
+    ASSERT_EQ(result, expectedresult);
+}
+
+
