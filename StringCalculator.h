@@ -4,6 +4,10 @@
 
 int validate_string(const char *str)
 {
+    if(str != NULL)
+    {
+        return 1;
+    }
     return 0;
 }
 
